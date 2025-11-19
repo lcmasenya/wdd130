@@ -1,0 +1,13 @@
+main {
+    max-width: 840px;
+}
+
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid #888;
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}

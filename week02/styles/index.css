@@ -1,3 +1,13 @@
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 main {
     max-width: 840px;
 }
@@ -9,5 +19,29 @@ aside {
     padding: 1rem;
     background-color: #eee;
     color: #333;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 1px solid #222;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+p {
+    padding: 0;
+}
+
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
     text-align: center;
 }

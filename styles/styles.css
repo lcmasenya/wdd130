@@ -61,7 +61,7 @@ main img {
     height: auto;
     border: 2px solid #333;
     padding: 5px;
-    box-shadow: #555;
+    box-shadow: 0 0 30px #555;
 }
 footer {
     margin-top: 15px;

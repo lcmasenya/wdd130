@@ -1,10 +1,14 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 header {
     background-color: lightpink;
     color: white;
-    padding: 10px;
-    text-align: center;
+    padding: 15px;
+    text-align: left;
     font-size: 1.5rem;
 }
 
@@ -20,6 +24,7 @@ aside {
     background-color: whitesmoke;
     color: #333;
     text-align: center;
+    position: relative;
 }
 
 h1 {
@@ -34,6 +39,12 @@ h2 {
 aside img {
     width: 200px;
     height: auto;
+}
+
+aside h2 {
+    position: absolute;
+    top: 9px;
+    left: 100px;
 }
 
 p {
@@ -59,13 +70,29 @@ h1 {
 main img {
     width: 200px;
     height: auto;
-    border: 2px solid #333;
-    padding: 5px;
+    border: 1px solid #333;
+    padding: 2px;
     box-shadow: 0 0 30px #555;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 footer {
     margin-top: 15px;
     border-top: 1px solid #333;
     text-align: center;
     background-color: lightpink;
+}
+
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0,0,0,1);
+    padding: 1rem;
+    background-color: #eee;
+    color: #000
+}
+
+.indent {
+    padding-left: 2rem;
 }

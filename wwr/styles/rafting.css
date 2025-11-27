@@ -4,7 +4,7 @@
     --primary-color: #fff; /* white */
     --secondary-color: #f4a261; /* warm sand */
     --accent1-color: #264653; /* dark slate blue */
-    --accent2-color: #e9c46a; /* light golden yellow */
+    --accent2-color: rgb(20, 25, 88); /* dark blue */
     --heading-font: "Times New Roman" "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }

@@ -27,8 +27,8 @@ header, main, footer {
 
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
-    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    background-color: var(--accent2-color);
     text-align: center;
     color: #fff;
     margin: 1px;

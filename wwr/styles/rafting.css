@@ -55,10 +55,11 @@ nav a {
 }
 
 .adventures {
-  display: flex;
+  display:;
   justify-content: space-between;
   gap: 1rem;
 }
+
 .adventures figure {
   text-align: center;
   flex: 1;

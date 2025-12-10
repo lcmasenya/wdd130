@@ -55,7 +55,7 @@ nav a {
 }
 
 .adventures {
-  display:;
+  display:flex;
   justify-content: space-between;
   gap: 1rem;
 }
@@ -204,4 +204,120 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #0084c7;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #555;
+  --primary: #0b6efd;   /* Accessible blue */
+  --accent: #0aa56e;    /* Secondary accent */
+  --surface: #f7f7f9;
+  --border: #e3e3e6;
+  --maxw: 1100px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header, footer {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+header .brand {
+  display: flex; align-items: center; gap: 0.75rem;
+  max-width: var(--maxw); margin: 0 auto; padding: 1rem;
+}
+.logo img { height: 40px; width: auto; }
+nav ul {
+  display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0 1rem 1rem;
+  max-width: var(--maxw); margin-inline: auto;
+}
+nav a { text-decoration: none; color: var(--text); padding: 0.5rem 0.75rem; border-radius: 6px; }
+nav a:hover, nav a.active { color: #fff; background: var(--primary); }
+
+main { max-width: var(--maxw); margin: 0 auto; padding: 1rem; }
+
+/* Hero */
+.hero { position: relative; margin: 0 -1rem 1rem; }
+.hero img { width: 100%; height: clamp(260px, 40vw, 520px); object-fit: cover; display: block; }
+.hero-message {
+  position: absolute; inset: auto 2rem 2rem 2rem;
+  max-width: 650px; padding: 1rem 1.25rem; border-radius: 10px;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+}
+.hero-message h2 { margin: 0 0 0.5rem; }
+.button {
+  display: inline-block; background: var(--accent); color: #fff;
+  padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; border: 0; cursor: pointer;
+}
+.button.primary { background: var(--primary); }
+.button:hover { filter: brightness(1.05); }
+
+/* Newsletter */
+.newsletter { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+.newsletter-form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.75rem; align-items: end; }
+.form-row { display: grid; gap: 0.35rem; }
+label { font-weight: 600; }
+input[type="text"], input[type="email"] {
+  padding: 0.6rem; border: 1px solid var(--border); border-radius: 8px; width: 100%;
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.feature {
+  display: grid; grid-template-columns: 120px 1fr; gap: 1rem;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.75rem;
+}
+.feature img { width: 120px; height: 100%; object-fit: cover; border-radius: 8px; }
+
+/* Trip cards */
+.cards-grid {
+  display: grid; gap: 1rem; grid-template-columns: repeat(3, 1fr);
+}
+.trip-card {
+  display: flex; flex-direction: column; border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; background: #fff;
+}
+.trip-card img { width: 100%; height: 180px; object-fit: cover; }
+.card-body { padding: 0.75rem 1rem; }
+
+/* Table */
+.table-responsive { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); text-align: left; }
+thead th { background: #eef3ff; }
+caption { padding: 0.5rem 1rem; font-weight: 700; text-align: left; }
+
+/* CTA contact */
+.cta-contact {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem;
+  background: #eefcf6; border: 1px solid var(--border); border-radius: 12px; padding: 1rem;
+}
+
+/* Footer */
+footer { margin-top: 2rem; padding: 1rem; border-top: 1px solid var(--border); }
+footer .citation { color: var(--muted); font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .features-grid { grid-template-columns: 1fr 1fr; }
+  .cards-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  nav ul { flex-wrap: wrap; }
+  .newsletter-form { grid-template-columns: 1fr; }
+  .features-grid, .cards-grid { grid-template-columns: 1fr; }
+  .cta-contact { grid-template-columns: 1fr; }
+  .hero-message { inset: auto 1rem 1rem 1rem; }
 }

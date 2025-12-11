@@ -100,20 +100,20 @@ nav, p, section, article {
 }
 
 .hero {
-    position: relative;
+    position: absolute;
 }
 
 .hero img {
-    display: block;
+    display:block;
     width: 100%;
-    height: auto;
+    height:auto;
 }
 
 h1 {
-    top: 20px;
+    top: 15px;
     width: 100%;
-    height:min-content;
-    padding: 16px;
+    height:45px;
+    padding: 1px;
     text-align: center;
     opacity: 0.7;
     background-color: var(--accent1-color);
@@ -122,9 +122,9 @@ h1 {
 }
 
 .hero article {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
+    position:absolute;
+    bottom: 0px;
+    width:100%;
     text-align: center;
     opacity: 0.9;
     background-color: var(--accent1-color);
@@ -133,7 +133,8 @@ h1 {
 
 .hero article img {
     float: right;
-    width: 125px;
+    width: 115px;
+    height: 80px;
     opacity: 0.8;
 }
 
